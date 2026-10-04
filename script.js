@@ -37,3 +37,12 @@ if (gpa >= 3.5) {
 } else {
   console.log("Fail");
 }
+
+function displayStudentInfo( name, course, year, university) {
+  console.log("Name: " + name);
+  console.log("Course: " + course);
+  console.log("Year: " + year);
+  console.log("University: " + university);
+
+}
+displayStudentInfo( Pheniline Jerono, Electrical Engineering, 3, JKUAT);
