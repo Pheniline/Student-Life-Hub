@@ -7,10 +7,16 @@ const units = [
 
 function showMyunits(units) {
   console.log("Semester 1 year 3 units : ");
-  console.log(units[0], units[1], units[2], units[3]);
 
-  for (let i = 0; i < units.length; i++) {
-    console.log(units[i]);
-  }
+  units.forEach(function (unit) {
+    console.log(unit);
+  });
 }
+showMyunits(units);
+
+units.push("Partial Differential Equations");
+units.push("Induction machines");
+showMyunits(units);
+
+units.pop("Digital systems");
 showMyunits(units);
