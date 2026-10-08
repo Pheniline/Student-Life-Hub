@@ -18,5 +18,5 @@ units.push("Partial Differential Equations");
 units.push("Induction machines");
 showMyunits(units);
 
-units.pop("Digital systems");
+units.splice(0, 1);
 showMyunits(units);
