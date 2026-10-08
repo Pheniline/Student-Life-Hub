@@ -1,22 +1,8 @@
-const units = [
-  "Digital systems",
-  "Simulation and Analysis",
-  "Signals & Systems",
-  "Electronic and Photonic Devices",
-];
+const student = {
+  name: "Pheniline Jerono",
+  year: "3",
+  course: "Electrical Engineering",
+  units: "8",
+};
 
-function showMyunits(units) {
-  console.log("Semester 1 year 3 units : ");
-
-  units.forEach(function (unit) {
-    console.log(unit);
-  });
-}
-showMyunits(units);
-
-units.push("Partial Differential Equations");
-units.push("Induction machines");
-showMyunits(units);
-
-units.splice(0, 1);
-showMyunits(units);
+console.log(student.name);
