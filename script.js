@@ -28,4 +28,6 @@ const units = [
   },
 ];
 
-console.log(units[0].name);
+units.forEach(function (units) {
+  console.log(units.name, units.code, units.status);
+});
