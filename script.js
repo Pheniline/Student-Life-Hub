@@ -30,9 +30,9 @@ const units = [
   },
 ];
 
-units.forEach(function (units) {
-  console.log(units.name, units.code, units.status);
-});
-const ThreegpaUnits = units.filter(function (units) {
+const threegpaUnits = units.filter(function (units) {
   return units.gpa === 3;
+});
+threegpaUnits.forEach(function (units) {
+  console.log(unit.name);
 });
