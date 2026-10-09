@@ -34,5 +34,9 @@ const threegpaUnits = units.filter(function (units) {
   return units.gpa === 3;
 });
 threegpaUnits.forEach(function (units) {
-  console.log(unit.name);
+  console.log(units.name);
 });
+const foundunit = units.find(function (units) {
+  return units.name === "Digital Systems";
+});
+console.log(foundunit.name, foundunit.code, foundunit.status);
