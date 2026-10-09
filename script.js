@@ -20,14 +20,19 @@ const units = [
     name: "Digital Systems",
     code: "EEE 301",
     status: "Incomplete",
+    gpa: 2,
   },
   {
     name: "Simulation and Analysis",
     code: "EEE 302",
     status: "Incomplete",
+    gpa: 3,
   },
 ];
 
 units.forEach(function (units) {
   console.log(units.name, units.code, units.status);
+});
+const ThreegpaUnits = units.filter(function (units) {
+  return units.gpa === 3;
 });
