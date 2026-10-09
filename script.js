@@ -26,7 +26,7 @@ const units = [
     name: "Simulation and Analysis",
     code: "EEE 302",
     status: "Incomplete",
-    gpa: 3,
+    gpa: 4,
   },
 ];
 
@@ -36,7 +36,8 @@ const threegpaUnits = units.filter(function (units) {
 threegpaUnits.forEach(function (units) {
   console.log(units.name);
 });
+
 const foundunit = units.find(function (units) {
-  return units.name === "Digital Systems";
+  return units.gpa === 4;
 });
 console.log(foundunit.name, foundunit.code, foundunit.status);
