@@ -51,3 +51,6 @@ const unitgpa = units.every(function (units) {
   return units.gpa < 2;
 });
 console.log(unitgpa);
+
+const heading = document.getElementById("welcome");
+heading.textContent = "WELCOME PHENILINE!";
