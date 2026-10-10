@@ -52,5 +52,8 @@ const unitgpa = units.every(function (units) {
 });
 console.log(unitgpa);
 
-const heading = document.getElementById("welcome");
-heading.textContent = "WELCOME PHENILINE!";
+const heading = document.getElementById("heading");
+const button = document.getElementById("course");
+button.addEventListener("click", function () {
+  heading.textContent = "COURSE: Electrical Engineering";
+});
