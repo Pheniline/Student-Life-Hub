@@ -52,8 +52,9 @@ const unitgpa = units.every(function (units) {
 });
 console.log(unitgpa);
 
-const heading = document.getElementById("heading");
-const button = document.getElementById("course");
+const heading = document.getElementById("welcome");
+const button = document.getElementById("submit");
 button.addEventListener("click", function () {
-  heading.textContent = "COURSE: Electrical Engineering";
+  heading.textContent = `Welcome ${document.getElementById("name").value}  ${document.getElementById("course").value} 
+  ${document.getElementById("year").value}!`;
 });
