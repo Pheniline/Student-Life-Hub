@@ -70,3 +70,14 @@ button.addEventListener("click", function () {
   ${document.getElementById("year").value}!`;
   }
 });
+
+const tasks = [
+  "Complete Digital Systems Assignment",
+  "Read on Electronic and Photonic Devices",
+];
+
+tasks.push("Complete Simulation And Analysis Laboratory Simulation");
+
+for (let i = 0; i < tasks.length; i++) {
+  console.log(tasks[i]);
+}
