@@ -86,5 +86,12 @@ addTaskButton.addEventListener("click", function () {
   });
 
   listItem.appendChild(deleteButton);
+
+  const completeButton = document.createElement("button");
+  completeButton.textContent = "Complete";
+  completeButton.addEventListener("click", function () {
+    listItem.style.textDecoration = "line-through";
+  });
+  listItem.appendChild(completeButton);
   tasklist.appendChild(listItem);
 });
