@@ -79,6 +79,12 @@ addTaskButton.addEventListener("click", function () {
   const listItem = document.createElement("li");
   listItem.textContent = task;
 
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  deleteButton.addEventListener("click", function () {
+    listItem.remove();
+  });
+
+  listItem.appendChild(deleteButton);
   tasklist.appendChild(listItem);
-  taskInput.value = "";
 });
