@@ -41,3 +41,8 @@ const foundunit = units.find(function (units) {
   return units.gpa === 4;
 });
 console.log(foundunit.name, foundunit.code, foundunit.status);
+
+const unitcodes = units.map(function (units) {
+  return units.code;
+});
+console.log(unitcodes);
