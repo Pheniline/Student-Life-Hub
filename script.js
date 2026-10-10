@@ -47,7 +47,7 @@ const unitcodes = units.map(function (units) {
 });
 console.log(unitcodes);
 
-const unitgpa = units.some(function (units) {
-  return units.gpa < 2;
+const unitgpa = units.every(function (units) {
+  return units.gpa < 5;
 });
-console.log(unitnames);
+console.log(unitgpa);
