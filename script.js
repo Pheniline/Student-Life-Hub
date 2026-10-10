@@ -71,17 +71,14 @@ button.addEventListener("click", function () {
   }
 });
 
-const tasks = [
-  "Complete Digital Systems Assignment",
-  "Read on Electronic and Photonic Devices",
-];
+const taskInput = document.getElementById("task-input");
+const addTaskButton = document.getElementById("add-task");
+addTaskButton.addEventListener("click", function () {
+  const tasklist = document.getElementById("task-list");
+  const task = taskInput.value;
+  const listItem = document.createElement("li");
+  listItem.textContent = task;
 
-tasks.push("Complete Simulation And Analysis Laboratory Simulation");
-
-const tasklist = document.getElementById("task-list");
-
-for (let i = 0; i < tasks.length; i++) {
-  const item = document.createElement("li");
-  item.textContent = tasks[i];
-  tasklist.appendChild(item);
-}
+  tasklist.appendChild(listItem);
+  taskInput.value = "";
+});
