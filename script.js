@@ -78,6 +78,12 @@ const tasks = [
 
 tasks.push("Complete Simulation And Analysis Laboratory Simulation");
 
+const tasklist = document.getElementById("task-list");
+const item = document.createElement("li");
+item.textContent = task[0];
+tasklist.appendChild(item);
+
 for (let i = 0; i < tasks.length; i++) {
   console.log(tasks[i]);
+  console.log(`Task Total: ${tasks.length}`);
 }
