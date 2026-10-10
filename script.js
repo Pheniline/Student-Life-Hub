@@ -55,6 +55,18 @@ console.log(unitgpa);
 const heading = document.getElementById("welcome");
 const button = document.getElementById("submit");
 button.addEventListener("click", function () {
-  heading.textContent = `Welcome ${document.getElementById("name").value}  ${document.getElementById("course").value} 
+  const name = document.getElementById("name").value;
+  const year = document.getElementById("year").value;
+  const course = document.getElementById("course").value;
+
+  if (name === "") {
+    heading.textContent = "Please enter your name";
+  } else if (year < 1 || year > 5) {
+    heading.textContent = "Please enter a valid year";
+  } else if (course === "") {
+    heading.textContent = "Please enter your course";
+  } else {
+    heading.textContent = `Welcome ${document.getElementById("name").value}  ${document.getElementById("course").value}
   ${document.getElementById("year").value}!`;
+  }
 });
