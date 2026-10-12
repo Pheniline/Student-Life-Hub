@@ -73,7 +73,7 @@ button.addEventListener("click", function () {
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-const taskInput = document.getElementById("task-input");
+const taskinput = document.getElementById("task-input");
 const addTaskButton = document.getElementById("add-task");
 addTaskButton.addEventListener("click", function () {
   const tasklist = document.getElementById("task-list");
@@ -96,19 +96,21 @@ addTaskButton.addEventListener("click", function () {
   });
   listItem.appendChild(completeButton);
   tasklist.appendChild(listItem);
-  task.push(tasks);
+  task.push(task);
   localStorage.setItem("tasks", JSON.stringify(task));
   function displayTasks() {
-    const tasklist = document.getElementById(task - list);
+    const tasklist = document.getElementById(task-list);
 
     tasklist.innerHTMl = "";
 
-    tasks.forEach (function (task) {
+    tasks.forEach (function (task)) {
     const listItem = document.createElement("li");
     listItem.textContent = task;
     }
      tasklist.appendChild(listItem);
     displayTasks();
-  
+  }
 });
+
+displayTasks();
  
