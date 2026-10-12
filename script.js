@@ -71,7 +71,7 @@ button.addEventListener("click", function () {
   }
 });
 
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
 
 const taskinput = document.getElementById("task-input");
 const addTaskButton = document.getElementById("add-task");
