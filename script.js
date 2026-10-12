@@ -93,7 +93,7 @@ completeButton.addEventListener("click", function () {
   isCompleted = !isCompleted
 
   if (isCompleted === true){
-    
+    taskText.style.textDecoration = "line-through";
   }
 
 
