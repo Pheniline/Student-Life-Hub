@@ -71,9 +71,7 @@ button.addEventListener("click", function () {
   }
 });
 
-
-
-const taskinput = document.getElementById("task-input");
+const taskInput = document.getElementById("task-input");
 const addTaskButton = document.getElementById("add-task");
 addTaskButton.addEventListener("click", function () {
   const tasklist = document.getElementById("task-list");
@@ -88,24 +86,16 @@ addTaskButton.addEventListener("click", function () {
   });
 
   listItem.appendChild(deleteButton);
-let isCompleted = false;
-completeButton.addEventListener("click", function () {
-  isCompleted = !isCompleted
+  let isCompleted = false;
+  completeButton.addEventListener("click", function () {
+    isCompleted = !isCompleted;
 
-  if (isCompleted === true){
-    taskText.style.textDecoration = "line-through";
-    completeButton.textContent = "  Undo";
-  }else{
-    taskText.style.textDecoration = "none";
-    completeButton.textContent = "Complete";
-  }
-
-
-
+    if (isCompleted === true) {
+      taskText.style.textDecoration = "line-through";
+      completeButton.textContent = "  Undo";
+    } else {
+      taskText.style.textDecoration = "none";
+      completeButton.textContent = "Complete";
+    }
   });
-
-  }
 });
-
-displayTasks();
- 
