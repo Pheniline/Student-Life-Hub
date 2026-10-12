@@ -94,7 +94,12 @@ completeButton.addEventListener("click", function () {
 
   if (isCompleted === true){
     taskText.style.textDecoration = "line-through";
+    completeButton.textContent = "  Undo";
+  }else{
+    taskText.style.textDecoration = "none";
+    completeButton.textContent = "Complete";
   }
+
 
 
   });
