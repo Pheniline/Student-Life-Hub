@@ -88,27 +88,12 @@ addTaskButton.addEventListener("click", function () {
   });
 
   listItem.appendChild(deleteButton);
+let isCompleted = false;
+completeButton.addEventListener("click", function () {
+  isCompleted = !isCompleted
 
-  const completeButton = document.createElement("button");
-  completeButton.textContent = "Complete";
-  completeButton.addEventListener("click", function () {
-    listItem.style.textDecoration = "line-through";
   });
-  listItem.appendChild(completeButton);
-  tasklist.appendChild(listItem);
-  task.push(task);
-  localStorage.setItem("tasks", JSON.stringify(task));
-  function displayTasks() {
-    const tasklist = document.getElementById(task-list);
 
-    tasklist.innerHTMl = "";
-
-    tasks.forEach (function (task)) {
-    const listItem = document.createElement("li");
-    listItem.textContent = task;
-    }
-     tasklist.appendChild(listItem);
-    displayTasks();
   }
 });
 
