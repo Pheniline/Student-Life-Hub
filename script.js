@@ -92,6 +92,11 @@ let isCompleted = false;
 completeButton.addEventListener("click", function () {
   isCompleted = !isCompleted
 
+  if (isCompleted === true){
+    
+  }
+
+
   });
 
   }
