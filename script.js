@@ -76,14 +76,17 @@ const addTaskButton = document.getElementById("add-task");
 addTaskButton.addEventListener("click", function () {
   const tasklist = document.getElementById("task-list");
   const task = taskInput.value; // Value entered by the user
+  // Creating a list
   const listItem = document.createElement("li");
   listItem.textContent = task;
-  listItem.appendChild("tasktext");
+  listItem.appendChild("tasktext"); // Display items on list
+
   // Delete Button
-  const deleteButton = document.createElement("button");
+  const deleteButton = document.createElement("button"); //Creating delete button
   deleteButton.textContent = "Delete";
   deleteButton.addEventListener("click", function () {
-    listItem.remove();
+    //Event listener & Event
+    listItem.remove(); //Action to take
   });
 
   listItem.appendChild(deleteButton);
