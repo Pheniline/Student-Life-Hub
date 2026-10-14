@@ -75,11 +75,11 @@ const taskInput = document.getElementById("task-input");
 const addTaskButton = document.getElementById("add-task");
 addTaskButton.addEventListener("click", function () {
   const tasklist = document.getElementById("task-list");
-  const task = taskInput.value;
+  const task = taskInput.value; // Value entered by the user
   const listItem = document.createElement("li");
   listItem.textContent = task;
-  listItem.appendChild("Tasktext");
-
+  listItem.appendChild("tasktext");
+  // Delete Button
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete";
   deleteButton.addEventListener("click", function () {
