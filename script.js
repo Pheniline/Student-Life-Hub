@@ -73,6 +73,9 @@ button.addEventListener("click", function () {
 
 const taskInput = document.getElementById("task-input");
 const addTaskButton = document.getElementById("add-task");
+
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
 addTaskButton.addEventListener("click", function () {
   const tasklist = document.getElementById("task-list");
   const task = taskInput.value; // Value entered by the user
