@@ -78,9 +78,10 @@ addTaskButton.addEventListener("click", function () {
   const task = taskInput.value; // Value entered by the user
   // Creating a list
   const listItem = document.createElement("li");
-  listItem.textContent = task;
-  listItem.appendChild("tasktext"); // Display items on list
+  const taskText = document.createElement("span");
+  taskText.textContent = task;
 
+  listItem.appendChild(taskText); //
   // Delete Button
   const deleteButton = document.createElement("button"); //Creating delete button
   deleteButton.textContent = "Delete";
@@ -95,7 +96,7 @@ addTaskButton.addEventListener("click", function () {
   const completeButton = document.createElement("button");
   completeButton.textContent = "Complete";
 
-  let isCompleted = false;
+  let isCompleted = false; // Boolean
   completeButton.addEventListener("click", function () {
     isCompleted = !isCompleted;
 
@@ -107,4 +108,9 @@ addTaskButton.addEventListener("click", function () {
       completeButton.textContent = "Complete";
     }
   });
+  listItem.appendChild(completeButton); // Display complete button
+
+  tasklist.appendChild(listItem); //Add task to the webpage
+
+  taskInput.value = ""; //Clear the input
 });
