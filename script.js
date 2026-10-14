@@ -89,7 +89,12 @@ addTaskButton.addEventListener("click", function () {
     listItem.remove(); //Action to take
   });
 
-  listItem.appendChild(deleteButton);
+  listItem.appendChild(deleteButton); // Display delete button
+
+  //Complete Button
+  const completeButton = document.createElement("button");
+  completeButton.textContent = "Complete";
+
   let isCompleted = false;
   completeButton.addEventListener("click", function () {
     isCompleted = !isCompleted;
