@@ -77,11 +77,11 @@ const addTaskButton = document.getElementById("add-task");
 let tasks = JSON.parse(localStorage.getItem("tasks")) || []; //your app will load previously saved tasks
 // if they exist, or start with an empty array if they don't.
 function displaySavedtask() {
+  // Function to enable the tasks to be displayed once the webpage is refreshed
   const tasklist = document.getElementById("task-list");
   tasks.forEach(function (task) {
     const listItem = document.createElement("li");
     listItem.textContent = task;
-    tasklist.appendChild(listItem);
   });
 }
 addTaskButton.addEventListener("click", function () {
@@ -92,42 +92,44 @@ addTaskButton.addEventListener("click", function () {
   tasks.push(task); //add task to array
   localStorage.setItem("tasks", JSON.stringify(tasks)); //saves updated array to browser
 
-  // Creating a list
-  const listItem = document.createElement("li");
-  const taskText = document.createElement("span");
-  taskText.textContent = task;
+  function createTaskElement(task) {
+    // Creating a list
+    const listItem = document.createElement("li");
+    const taskText = document.createElement("span");
+    taskText.textContent = task;
 
-  listItem.appendChild(taskText); //
-  // Delete Button
-  const deleteButton = document.createElement("button"); //Creating delete button
-  deleteButton.textContent = "Delete";
-  deleteButton.addEventListener("click", function () {
-    //Event listener & Event
-    listItem.remove(); //Action to take
-  });
+    listItem.appendChild(taskText); //
+    // Delete Button
+    const deleteButton = document.createElement("button"); //Creating delete button
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", function () {
+      //Event listener & Event
+      listItem.remove(); //Action to take
+    });
 
-  listItem.appendChild(deleteButton); // Display delete button
+    listItem.appendChild(deleteButton); // Display delete button
 
-  //Complete Button
-  const completeButton = document.createElement("button");
-  completeButton.textContent = "Complete";
+    //Complete Button
+    const completeButton = document.createElement("button");
+    completeButton.textContent = "Complete";
 
-  let isCompleted = false; // Boolean
-  completeButton.addEventListener("click", function () {
-    isCompleted = !isCompleted;
+    let isCompleted = false; // Boolean
+    completeButton.addEventListener("click", function () {
+      isCompleted = !isCompleted;
 
-    if (isCompleted === true) {
-      taskText.style.textDecoration = "line-through";
-      completeButton.textContent = "  Undo";
-    } else {
-      taskText.style.textDecoration = "none";
-      completeButton.textContent = "Complete";
-    }
-  });
-  listItem.appendChild(completeButton); // Display complete button
+      if (isCompleted === true) {
+        taskText.style.textDecoration = "line-through";
+        completeButton.textContent = "  Undo";
+      } else {
+        taskText.style.textDecoration = "none";
+        completeButton.textContent = "Complete";
+      }
+    });
+    listItem.appendChild(completeButton); // Display complete button
 
-  tasklist.appendChild(listItem); //Add task to the webpage
+    return listItem; //Add task to the webpage
 
-  taskInput.value = "";
+    taskInput.value = "";
+  }
 });
 displaySavedtask(); //Displays task even after refereshing the webpage
