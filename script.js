@@ -79,7 +79,12 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || []; //your app will loa
 
 addTaskButton.addEventListener("click", function () {
   const tasklist = document.getElementById("task-list");
-  const task = taskInput.value; // Value entered by the user
+  const task = taskInput.value.trim(); // Value entered by the user
+  if (task === "") return; //Ignore empty task
+
+  tasks.push(task);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+
   // Creating a list
   const listItem = document.createElement("li");
   const taskText = document.createElement("span");
