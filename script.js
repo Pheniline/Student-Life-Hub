@@ -76,7 +76,14 @@ const addTaskButton = document.getElementById("add-task");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || []; //your app will load previously saved tasks
 // if they exist, or start with an empty array if they don't.
-
+function displaySavedtask() {
+  const tasklist = document.getElementById("task-list");
+  tasks.forEach(function (task) {
+    const listItem = document.createElement("li");
+    listItem.textContent = task;
+    tasklist.appendChild(listItem);
+  });
+}
 addTaskButton.addEventListener("click", function () {
   const tasklist = document.getElementById("task-list");
   const task = taskInput.value.trim(); // Value entered by the user & trim() removes spaces at the beginning & end
@@ -121,5 +128,6 @@ addTaskButton.addEventListener("click", function () {
 
   tasklist.appendChild(listItem); //Add task to the webpage
 
-  taskInput.value = ""; //Clear the input
+  taskInput.value = "";
 });
+displaySavedtask(); //Displays task even after refereshing the webpage
