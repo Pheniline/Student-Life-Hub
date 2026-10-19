@@ -148,4 +148,10 @@ displaySavedtask(); //Displays task even after refereshing the webpage
 
 const order = new Promise((resolve, reject) => {
   //newPromise creates a promise resolve() : marks it as unsuccessful & supplies the result
+  resolve("Your food is ready!");
+});
+
+order.then(function (message) {
+  //runs a callback when the promise is fulfilled
+  console.log(message);
 });
