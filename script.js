@@ -143,3 +143,9 @@ function createTaskElement(task) {
   //Add task to the webpage
 }
 displaySavedtask(); //Displays task even after refereshing the webpage
+
+// Promises : a JavaScript object representing a result that may become available later.
+
+const order = new Promise((resolve, reject) => {
+  //newPromise creates a promise resolve() : marks it as unsuccessful & supplies the result
+});
