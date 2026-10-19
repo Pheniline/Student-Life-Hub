@@ -111,7 +111,7 @@ function createTaskElement(task) {
     if (taskIndex !== -1) {
       //checks that the task was found before tring to remove it
       tasks.splice(taskIndex, 1); //remove one task from the array
-      localStorage.setItem("tasks", JSON(stringify(tasks))); //update localStorage and the updated array so the deleted task doesn't return after refreshing
+      localStorage.setItem("tasks", JSON.stringify(tasks)); //update localStorage and the updated array so the deleted task doesn't return after refreshing
     }
 
     listItem.remove(); //Action to take
