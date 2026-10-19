@@ -174,3 +174,21 @@ async function showAssignment() {
 }
 
 showAssignment();
+
+function getAssignment() {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve("Complete Digital Systems");
+    }, 2000);
+  });
+}
+
+async function showAssignment() {
+  console.log("Loading assignment...");
+
+  const assignment = await getAssignment();
+
+  console.log(assignment);
+}
+
+showAssignment();
