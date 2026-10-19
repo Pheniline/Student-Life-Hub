@@ -92,6 +92,8 @@ addTaskButton.addEventListener("click", function () {
 
   tasks.push(task); //add task to array
   localStorage.setItem("tasks", JSON.stringify(tasks)); //saves updated array to browser
+  const listItem = createTaskElement(task);
+  tasklist.appendChild(listItem); // A newly added task appears immediately with its delete & complete button
 
   taskInput.value = "";
 });
