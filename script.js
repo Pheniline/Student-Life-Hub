@@ -152,13 +152,25 @@ const order = new Promise((resolve, reject) => {
 });
 
 result
-.then(function (message) {
-  //runs a callback when the promise is fulfilled or handles a successful event
-  console.log(message);
-})
-.catch(function(error){//catch () handles a rejection or an error propagated through the promise chain
-  console.log("Error:", error)
-};
-)
+  .then(function (message) {
+    //runs a callback when the promise is fulfilled or handles a successful event
+    console.log(message);
+  })
+  .catch(function (error) {
+    //catch () handles a rejection or an error propagated through the promise chain
+    console.log("Error:", error);
+  });
+
 //rejects marks as a promise as failed
 
+function getAssignment() {
+  return Promise.resolve("Read Chapter 1");
+}
+
+async function showAssignment() {
+  // async always returns a Promise.
+  const assignment = await getAssignment(); // await lets us wait for a Promise's result inside an async function.
+  console.log(assignment);
+}
+
+showAssignment();
