@@ -147,11 +147,18 @@ displaySavedtask(); //Displays task even after refereshing the webpage
 // Promises : a JavaScript object representing a result that may become available later.
 
 const order = new Promise((resolve, reject) => {
-  //newPromise creates a promise resolve() : marks it as unsuccessful & supplies the result
+  //newPromise creates a promise resolve() : marks it as successful & supplies the result
   resolve("Your food is ready!");
 });
 
-order.then(function (message) {
-  //runs a callback when the promise is fulfilled
+result
+.then(function (message) {
+  //runs a callback when the promise is fulfilled or handles a successful event
   console.log(message);
-});
+})
+.catch(function(error){//catch () handles a rejection or an error propagated through the promise chain
+  console.log("Error:", error)
+};
+)
+//rejects marks as a promise as failed
+
