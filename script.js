@@ -80,7 +80,7 @@ function displaySavedtask() {
   // Function to enable the tasks to be displayed once the webpage is refreshed
   const tasklist = document.getElementById("task-list");
   tasks.forEach(function (task) {
-    const listItem = document.createElement("li");
+    const listItem = document.createTaskElement(task); //Instead of creating an empty <li>, we call createTaskElement(task), which creates the task text and both buttons.
 
     tasklist.appendChild(listItem);
   });
