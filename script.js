@@ -186,7 +186,7 @@ function getAssignment() {
 async function showAssignment() {
   try {
     //Attempts to run the code
-    console.log("Loading assignment...");
+    console.log("Loading assignment..."); //Prints first
 
     const assignment = await getAssignment(); //waits for the asnchronous result
 
