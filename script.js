@@ -198,3 +198,4 @@ async function showAssignment() {
 }
 
 showAssignment();
+//fetch() sends a request to a URL to retrieve data from a server.
