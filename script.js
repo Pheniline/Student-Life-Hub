@@ -185,12 +185,14 @@ function getAssignment() {
 
 async function showAssignment() {
   try {
+    //Attempts to run the code
     console.log("Loading assignment...");
 
     const assignment = await getAssignment();
 
     console.log(assignment);
   } catch (error) {
+    //Handles the error if the awaited promise rejects
     console.log("Could not load assignments");
   }
 }
