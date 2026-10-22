@@ -186,7 +186,7 @@ function getAssignment() {
 async function showAssignment() {
   try {
     //Attempts to run the code
-    
+
     console.log("Loading assignment..."); //Prints first
 
     const assignment = await getAssignment(); //waits for the asnchronous result
@@ -200,13 +200,16 @@ async function showAssignment() {
 
 showAssignment();
 //fetch() sends a request to a URL to retrieve data from a server.
-async function loadAssignment(){
-  try{
+async function loadAssignment() {
+  try {
     const response = await fetch(
-      "https://jsonplaceholder.typicode.com/todos/1"
+      //sends a request to the server. It returns a Promise, so we use await to wait for the response
+      "https://jsonplaceholder.typicode.com/todos/1",
     );
-    const assignment = await response.json();
+    const assignment = await response.json(); //reads the response body and converts JSON into a JavaScript value. It also returns a Promise, which is why we use await again.
 
-    console.log("Assignments")
+    console.log("Assignments");
+  } catch (error) {
+    console.log("Could not load Assignments");
   }
 }
