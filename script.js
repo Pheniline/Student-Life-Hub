@@ -210,6 +210,6 @@ async function loadAssignment() {
 
     console.log("Assignments");
   } catch (error) {
-    console.log("Could not load Assignments");
+    console.log("Could not load Assignments"); //displays the returned object in the console.
   }
 }
