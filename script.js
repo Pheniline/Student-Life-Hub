@@ -205,6 +205,8 @@ async function loadAssignment(){
     const response = await fetch(
       "https://jsonplaceholder.typicode.com/todos/1"
     );
-    const assignment = await response.json
+    const assignment = await response.json();
+
+    console.log("Assignments")
   }
 }
