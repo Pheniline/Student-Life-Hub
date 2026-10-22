@@ -186,6 +186,7 @@ function getAssignment() {
 async function showAssignment() {
   try {
     //Attempts to run the code
+    
     console.log("Loading assignment..."); //Prints first
 
     const assignment = await getAssignment(); //waits for the asnchronous result
@@ -199,3 +200,8 @@ async function showAssignment() {
 
 showAssignment();
 //fetch() sends a request to a URL to retrieve data from a server.
+async function loadAssignment(){
+  try{
+    const response = await
+  }
+}
