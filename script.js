@@ -184,11 +184,15 @@ function getAssignment() {
 }
 
 async function showAssignment() {
-  console.log("Loading assignment...");
+  try {
+    console.log("Loading assignment...");
 
-  const assignment = await getAssignment();
+    const assignment = await getAssignment();
 
-  console.log(assignment);
+    console.log(assignment);
+  } catch (error) {
+    console.log("Could not load assignments");
+  }
 }
 
 showAssignment();
