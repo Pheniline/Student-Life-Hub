@@ -176,9 +176,9 @@ async function showAssignment() {
 showAssignment();
 
 function getAssignment() {
-  return new Promise(function (resolve) {
+  return new Promise(function (reject) {
     setTimeout(function () {
-      resolve("Complete Digital Systems");
+      reject("Server Unavailable");
     }, 2000);
   });
 }
@@ -190,7 +190,7 @@ async function showAssignment() {
 
     const assignment = await getAssignment(); //waits for the asnchronous result
 
-    console.log(assignment);
+    console.log("Assignment not loaded");
   } catch (error) {
     //Handles the error if the awaited promise rejects
     console.log("Could not load assignments");
