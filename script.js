@@ -190,7 +190,7 @@ async function showAssignment() {
 
     const assignment = await getAssignment(); //waits for the asnchronous result
 
-    console.log("Assignment not loaded");
+    console.log("Assignment loaded");
   } catch (error) {
     //Handles the error if the awaited promise rejects
     console.log("Could not load assignments");
