@@ -179,7 +179,7 @@ function getAssignment() {
   return new Promise(function (reject) {
     setTimeout(function () {
       reject("Server Unavailable");
-    }, 2000);
+    }, 2000); //2000 miliseconds is the timeout
   });
 }
 
