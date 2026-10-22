@@ -202,6 +202,9 @@ showAssignment();
 //fetch() sends a request to a URL to retrieve data from a server.
 async function loadAssignment(){
   try{
-    const response = await
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/1"
+    );
+    const assignment = await response.json
   }
 }
