@@ -213,3 +213,6 @@ async function loadAssignment() {
     console.log("Could not load Assignments"); //displays the returned object in the console.
   }
 }
+
+const statusMessagen = document.getElementById("status");
+const loadButton = document.getElementById("load-button");
