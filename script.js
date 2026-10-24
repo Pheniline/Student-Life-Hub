@@ -232,5 +232,9 @@ async function loadAssignment() {
       throw new Error("Failed to load Assignments")
     }
 
+    const assignments = await response.json();
+    assignmentArea.textContent = assignment.title;
+    
+
   }
 }
