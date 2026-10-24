@@ -221,7 +221,7 @@ const assignmentArea = document.getElementById("assignments");
 loadButton.addEventListener("click", Assignments);
 
 async function loadAssignment() {
-  statusMessage.textContent = "Load Assignment .....";
+  statusMessage.textContent = "Loading Assignment .....";
   assignmentArea.textContent = "";
 
   try {
@@ -236,7 +236,7 @@ async function loadAssignment() {
     assignmentArea.textContent = assignment.title;
     statusMessage.textContent = "Assignment loaded successfully";
   } catch (error) {
-    statusMessage.textContent = "";
+    statusMessage.textContent = "Could not load Assignment";
     console.log("error");
   }
 }
