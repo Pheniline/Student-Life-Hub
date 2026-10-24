@@ -222,4 +222,9 @@ loadButton.addEventListener("click", Assignments);
 
 async function loadAssignment() {
   statusMessage.textContent = "Load Assignment .....";
+  assignmentArea.textContent = "";
+
+  try{
+    
+  }
 }
