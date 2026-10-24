@@ -224,18 +224,19 @@ async function loadAssignment() {
   statusMessage.textContent = "Load Assignment .....";
   assignmentArea.textContent = "";
 
-  try{
-    const response = await  fetch(
-      "https://jsonplaceholder.typicode.com/todos/1"
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/1",
     );
-    if (!response.ok){
-      throw new Error("Failed to load Assignments")
+    if (!response.ok) {
+      throw new Error("Failed to load Assignments");
     }
 
     const assignments = await response.json();
     assignmentArea.textContent = assignment.title;
     statusMessage.textContent = "Assignment loaded successfully";
-    
-
+  } catch (error) {
+    statusMessage.textContent = "";
+    console.log("error");
   }
 }
