@@ -234,6 +234,7 @@ async function loadAssignment() {
 
     const assignments = await response.json();
     assignmentArea.textContent = assignment.title;
+    statusMessage.textContent = "Assignment loaded successfully";
     
 
   }
