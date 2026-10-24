@@ -216,3 +216,4 @@ async function loadAssignment() {
 
 const statusMessagen = document.getElementById("status");
 const loadButton = document.getElementById("load-button");
+const assignmentArea = document.getElementById("assignments");
